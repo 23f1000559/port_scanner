@@ -1,8 +1,10 @@
 import socket
 
-ip = "127.0.0.1"
+ip = input("Enter IP: ")
+start = int(input("Start port: "))
+end = int(input("End port: "))
 # if connection successful , port open , else not 
-for port in [22, 80, 443, 3306, 8080]:
+for port in range(start,end):
     # socket instance
     s = socket.socket()
     s.settimeout(1)
